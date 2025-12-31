@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithm Visualizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* For Webkit-based browsers (Chrome, Safari) */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b; /* slate-800 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569; /* slate-600 */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b; /* slate-500 */
+      }
+      
+      @keyframes pulse-sorted-kf {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); /* green-400 */
+        }
+        50% {
+          transform: scale(1.1);
+          box-shadow: 0 0 10px 5px rgba(52, 211, 153, 0);
+        }
+      }
+      .animate-pulse-sorted {
+        animation: pulse-sorted-kf 0.6s ease-out;
+      }
+
+      @keyframes pulse-conquer-kf {
+        0%, 100% { box-shadow: 0 0 0 0px rgba(52, 211, 153, 0.7); } /* green-400 */
+        50% { box-shadow: 0 0 8px 3px rgba(52, 211, 153, 0); }
+      }
+      .animate-pulse-conquer {
+        animation: pulse-conquer-kf 1s ease-out;
+      }
+
+      @keyframes pulse-current-node-kf {
+        0%, 100% {
+          transform: scale(1);
+          filter: brightness(100%);
+        }
+        50% {
+          transform: scale(1.05);
+          filter: brightness(150%);
+        }
+      }
+      .animate-pulse-current {
+        animation: pulse-current-node-kf 1.5s infinite ease-in-out;
+      }
+
+      @keyframes pulse-min-update-kf {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.15);
+        }
+      }
+      .animate-pulse-min-update {
+        animation: pulse-min-update-kf 0.5s ease-in-out;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-YnMhSwwf.js"></script>
+</head>
+  <body class="bg-slate-900 text-slate-100">
+    <div id="root"></div>
+  </body>
+</html>
